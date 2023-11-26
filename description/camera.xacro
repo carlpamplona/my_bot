@@ -23,7 +23,7 @@
             <origin xyz="0 0 0" rpy="0 0 0"/>
         </xacro:inertial_cylinder>
     </link>
-
+ 
 
     <joint name="camera_optical_joint" type="fixed">
         <parent link="camera_link"/>
@@ -32,6 +32,8 @@
     </joint>
 
     <link name="camera_link_optical"></link>
+
+
 
 
 
