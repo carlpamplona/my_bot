@@ -8,11 +8,11 @@ def generate_launch_description():
 
     joy_params = os.path.join(get_package_share_directory('my_bot'),'config','joystick.yaml')
 
-    joy_node = Node(
-            package='joy',
-            executable='joy_node',
-            parameters=[joy_params],
-         )
+    # joy_node = Node(
+    #         package='joy',
+    #         executable='joy_node',
+    #         parameters=[joy_params],
+    #      )
 
     teleop_node = Node(
             package='teleop_twist_joy', 
@@ -24,6 +24,6 @@ def generate_launch_description():
     
 
     return LaunchDescription([
-        joy_node,
+        # joy_node,
         teleop_node     
     ])
