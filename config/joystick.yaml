@@ -22,5 +22,10 @@ teleop_node:
       yaw: 1.0
 
     require_enable_button: false
+<<<<<<< HEAD
     enable_button: 1  # Left shoulder button
     enable_turbo_button: 2  # Right shoulder button
+=======
+    enable_button: 6  # Left shoulder button
+    enable_turbo_button: 7  # Right shoulder button
+>>>>>>> 4b25a21f8fc6c94daf4c0159a972fe023c262273
