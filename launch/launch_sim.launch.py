@@ -52,6 +52,12 @@ def generate_launch_description():
         executable="spawner.py",
         arguments=["joint_broad"],
     )
+
+    joystick = IncludeLaunchDescription(
+            PythonLaunchDescriptionSource([os.path.join(
+                get_package_share_directory(package_name),'launch','joystick.launch.py'
+            )]), launch_arguments={'use_sim_time': 'true'}.items()
+    )
  
  
     # Code for delaying a node (I haven't tested how effective it is)
@@ -76,6 +82,7 @@ def generate_launch_description():
     return LaunchDescription([
         rsp,
         gazebo,
+        joystick,
         spawn_entity,
         diff_drive_spawner,
         joint_broad_spawner
