@@ -79,12 +79,13 @@ def generate_launch_description():
         )
     )
 
-    # joystick = IncludeLaunchDescription(
-    #         PythonLaunchDescriptionSource([os.path.join(
-    #             get_package_share_directory(package_name),'launch','joystick.launch.py'
-    #         )]), launch_arguments={'use_sim_time': 'false'}.items()
-    # )
- 
+    joystick = IncludeLaunchDescription(
+            PythonLaunchDescriptionSource([os.path.join(
+                get_package_share_directory(package_name),'launch','joystick.launch.py'
+            )]), launch_arguments={'use_sim_time': 'false'}.items()
+    )
+
+
  
     # Code for delaying a node (I haven't tested how effective it is)
     # 
@@ -117,6 +118,7 @@ def generate_launch_description():
     rsp,
     delayed_controller_manager,
     delayed_diff_drive_spawner,
-    delayed_joint_broad_spawner
-    # joystick
+    delayed_joint_broad_spawner,
+    joystick
+    
 ])
